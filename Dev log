@@ -29,3 +29,16 @@ git add .
 git commit -m "Add a StaticPages controller"
 rails generate integration_test static_pages
 
+Followed instructions here to eliminate need to type "bundle exec":
+	http://ruby.railstutorial.org/chapters/static-pages?version=3.2#sec:eliminating_bundle_exec
+bundle install --without production --binstubs=./bundler_stubs
+
+Followed instructions here to automate tests with Guard:
+	http://ruby.railstutorial.org/chapters/static-pages?version=3.2#sec:guard
+
+Followed instructions here to speed up tests with Spork:
+	http://ruby.railstutorial.org/chapters/static-pages?version=3.2#sec:spork
+
+added new gems to bundle to avoid "bundle exec" with:
+	$ bundle --binstubs=./bundler_stubs
+

@@ -42,3 +42,7 @@ Followed instructions here to speed up tests with Spork:
 added new gems to bundle to avoid "bundle exec" with:
 	$ bundle --binstubs=./bundler_stubs
 
+rails generate controller Users new --no-test-framework
+
+rails generate integration_test user_pages
+

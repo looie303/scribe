@@ -1,0 +1,31 @@
+Dev log
+
+rails new scribe --skip-test-unit
+
+gemfile modified to match this one:
+	http://ruby.railstutorial.org/chapters/updating-showing-and-deleting-users?version=3.2#code:final_gemfile
+
+bundle install (forgot to run as --without production)
+
+	error encountered during bundle install: railties dependency not resolved
+	error corrected by deleting gemlock and re-running bundle install
+
+rails generate rspec:install
+
+git init
+git add .
+git commit -m "Initial commit"
+
+README updated
+github repo set up
+
+git remote add origin git@github.com:looie303/scribe.git
+git push -u origin master
+heroku create --stack cedar
+git push heroku master
+git co -b static-pages
+rails generate controller StaticPages home help --no-test-framework
+git add .
+git commit -m "Add a StaticPages controller"
+rails generate integration_test static_pages
+

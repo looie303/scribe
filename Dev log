@@ -46,3 +46,10 @@ rails generate controller Users new --no-test-framework
 
 rails generate integration_test user_pages
 
+rails generate model User name:string email:string
+
+bundle exec annotate --position before
+
+bundle exec rake db:test:prepare
+
+rails generate migration add_password_digest_to_users password_digest:string

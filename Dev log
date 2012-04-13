@@ -53,3 +53,5 @@ bundle exec annotate --position before
 bundle exec rake db:test:prepare
 
 rails generate migration add_password_digest_to_users password_digest:string
+
+paused for restart during chapter 7 section on error message processing
